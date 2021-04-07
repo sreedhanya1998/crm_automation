@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'crm_automation/detailfortemplate.html'%}
+{%block body_block%}
+<table id="keywords" cellspacing="0" cellpadding="0">
+    <tr>
+         <td>batch_code</td>
+         <td>course</td>
+         <td>starting_date</td>
+         <td>course_fees</td>
+         <td>batch_status</td>
+    </tr>
+    {%for course in item%}
+    <tr>
+        <td>{{course.batch_code}}</td>
+        <td>{{course.course}}</td>
+        <td>{{course.starting_date}}</td>
+        <td>{{course.course_fees}}</td>
+        <td>{{course.batch_status}}</td>
+        <td><a href="{%url 'about' %}">About</a></td>
+        <td><a href="{%url 'studlogin' %}">Register</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}

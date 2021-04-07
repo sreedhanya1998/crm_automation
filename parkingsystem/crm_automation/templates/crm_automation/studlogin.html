@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{%extends 'crm_automation/counsillorlogintemplate.html'%}
+{%block body_block%}
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <a href="{%url 'counsil' %}" class="btn btn-outline-primary" type="submit">CounsillorLogin</a>
+
+</form>
+{%endblock%}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{%extends 'crm_automation/registrationtemplate.html' %}
+{%block body_block%}
+<form>
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="register">
+
+</form>
+{%endblock%}

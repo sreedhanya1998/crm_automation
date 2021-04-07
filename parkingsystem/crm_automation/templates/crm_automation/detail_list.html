@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'crm_automation/detailfortemplate.html' %}
+{%block body_block%}
+<table id="keywords" cellspacing="0" cellpadding="0">
+    <tr>
+         <td>batch_code</td>
+         <td>course</td>
+         <td>starting_date</td>
+         <td>course_fees</td>
+         <td>batch_status</td>
+    </tr>
+    {%for course in item%}
+    <tr>
+        <td>{{course.batch_code}}</td>
+        <td>{{course.course}}</td>
+        <td>{{course.starting_date}}</td>
+        <td>{{course.course_fees}}</td>
+        <td>{{course.batch_status}}</td>
+
+        <td><a href="{%url 'view' course.id%}" class="btn btn-primary">View</a></td>
+         <td><a href="{%url 'edit' course.id%}" class="btn btn-primary">Edit</a></td>
+         <td><a href="{%url 'delete' course.id%}" class="btn btn-primary">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}

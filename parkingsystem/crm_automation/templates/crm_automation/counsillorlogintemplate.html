@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="SaaS & Software Html5 Landing Page" />
+        <meta name="keywords" content="agency, bootstrap, business, corporate, creative, landing page, marketing, multipurpose, product, product launch, responsive, software, startup, startup landing page" />
+        <meta name="author" content="ThemesBoss" />
+
+        <!-- Site Title -->
+        <title>Counsillor login</title>
+
+        <!-- Site favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{%static 'css/counsil1.css' %}" type="text/css">
+
+        <!-- Material Icon -->
+        <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+
+        <!-- Pe7 Icon -->
+        <link rel="stylesheet" href="css/pe-icon-7.css">
+
+        <!-- Custom  Css -->
+        <link rel="stylesheet" href="{%static 'css/counsil.css' %}">
+
+    </head>
+	<body>
+
+        <section class="bg-gradient position-relative h-100vh">
+            <div class="bg-overlay-home" style="background-image: url(images/animation.png);"></div>
+            <div class="home-table">
+                <div class="home-table-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="text-center">
+                                    <p class="mb-4 pb-3"><a href="index.html" class="text-white"> <i class="mdi mdi-home"></i></a></p>
+                                </div>
+                                <div class="account_box bg-gradient">
+                                    <img src="images/logo.png" alt="" class="img-fluid mx-auto d-block" style="height: 32px;">
+                                    {%block body_block%}
+
+                                    {%endblock%}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JAVASCRIPTS -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+
+
+

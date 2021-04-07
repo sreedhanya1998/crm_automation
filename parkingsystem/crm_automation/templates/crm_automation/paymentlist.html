@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-dark table-striped">
+    <tr>
+        <td>admission_no</td>
+        <td>amount</td>
+        <td>payment_date</td>
+    </tr>
+    {%for course in obj%}
+    <tr>
+        <td>{{course.admission_no}}</td>
+        <td>{{course.amount}}</td>
+        <td>{{course.payment_date}}</td>
+
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

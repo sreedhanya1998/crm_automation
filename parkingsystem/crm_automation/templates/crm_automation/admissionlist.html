@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-dark table-striped">
+    <tr>
+        <td>enquiry_id</td>
+         <td>student_name</td>
+         <td>address</td>
+         <td>qualification</td>
+         <td>collegename</td>
+         <td>course</td>
+         <td>phone</td>
+         <td>email</td>
+         <td>batchcode</td>
+         <td>followupdate</td>
+         <td>admissionstatus</td>
+    </tr>
+    {%for course in obj%}
+    <tr>
+
+        <td>{{course.enquiry_id}}</td>
+        <td>{{course.student_name}}</td>
+        <td>{{course.address}}</td>
+        <td>{{course.qualification}}</td>
+        <td>{{course.collegename}}</td>
+        <td>{{course.course}}</td>
+        <td>{{course.phone}}</td>
+        <td>{{course.email}}</td>
+        <td>{{course.batch_code}}</td>
+        <td>{{course.followupdate}}</td>
+        <td>{{course.admission_status}}</td>
+
+        {%if course.admission_status == 'callback'%}
+            <td><a href="{%url 'admitted' course.enquiry_id %}" class="btn btn-outline-primary">Register</a></td>
+        {%elif course.admission_status == 'notadmitted'%}
+            <td>No admission</td>
+        {%else%}
+            <td>Registered</td>
+        {%endif%}
+
+
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>
